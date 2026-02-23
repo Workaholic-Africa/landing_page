@@ -29,7 +29,7 @@ const Carousel = () => {
                 </div>
 
                 <div className="cta-group">
-                    <button className="btn cta-btn cta-dark" onClick={() => navigate('/404')}>Join Waitlist</button>
+                    <button className="btn cta-btn cta-dark" onClick={() => window.location.href = 'https://waitlist.workaholicafrica.com'}>Join Waitlist</button>
                     <button className="btn cta-btn cta-primary" onClick={() => navigate('/404')}>Subscribe Now</button>
                 </div>
             </div>
