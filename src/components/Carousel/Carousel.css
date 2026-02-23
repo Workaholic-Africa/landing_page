@@ -1,0 +1,130 @@
+.carousel-section {
+    padding: var(--spacing-xl) 0 var(--spacing-xxl);
+    position: relative;
+    z-index: 5;
+}
+
+.carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-track {
+    display: flex;
+    gap: var(--spacing-lg);
+    justify-content: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.carousel-item {
+    width: 124px;
+    height: 177px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-normal);
+    position: relative;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Gradient overlay for all images */
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.5));
+    pointer-events: none;
+}
+
+.carousel-item {
+    filter: grayscale(100%);
+    opacity: 0.8;
+}
+
+.carousel-item.active-color {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(255, 0, 64, 0.2);
+    z-index: 2;
+}
+
+/* Add a red overlay explicitly for the active color item to mimic the previous red placeholder effect */
+.carousel-item.active-color::after {
+    background: linear-gradient(to bottom, transparent 30%, rgba(255, 0, 64, 0.5));
+}
+
+.carousel-item:hover {
+    transform: translateY(-10px);
+    filter: grayscale(0%);
+    opacity: 1;
+    z-index: 3;
+}
+
+.carousel-item.active-color:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+/* CTA Buttons under carousel */
+.cta-group {
+    display: flex;
+    width: 377px;
+    height: 38px;
+    background-color: #A0FF00;
+    border-radius: 38px;
+    padding: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: none;
+}
+
+.cta-btn {
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.cta-dark {
+    width: 55%;
+    background: linear-gradient(to right, #202020, #7b7b7b);
+    color: #A0FF00;
+    border-radius: 38px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.cta-dark:hover {
+    background: linear-gradient(to right, #111111, #666666);
+}
+
+.cta-primary {
+    flex: 1;
+    background: transparent;
+    color: var(--color-dark);
+    border-radius: 0 38px 38px 0;
+    box-shadow: none;
+    z-index: 1;
+    padding-left: 10px;
+}
+
+.cta-primary:hover {
+    opacity: 0.8;
+}
