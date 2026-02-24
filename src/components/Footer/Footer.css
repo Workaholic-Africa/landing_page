@@ -88,8 +88,11 @@
 
 /* Contact Column */
 .contact-heading {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0%;
     margin-bottom: var(--spacing-md);
     color: var(--color-text);
 }
