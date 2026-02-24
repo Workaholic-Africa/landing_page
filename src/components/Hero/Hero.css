@@ -129,3 +129,56 @@
     background-color: #e6e6e6;
     color: var(--color-text);
 }
+
+/* Responsive adjustments for Hero */
+@media (max-width: 768px) {
+    .headline {
+        font-size: 48px;
+    }
+
+    .search-bar-wrapper {
+        width: 100%;
+        max-width: 532px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .headline {
+        font-size: 36px;
+    }
+
+    .subhead {
+        font-size: 14px;
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .search-bar-wrapper {
+        height: auto;
+        padding: 6px;
+        border-radius: var(--border-radius-md);
+    }
+
+    .search-bar {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .search-input-group {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .search-input {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .state-selector {
+        width: 100%;
+        text-align: center;
+    }
+}

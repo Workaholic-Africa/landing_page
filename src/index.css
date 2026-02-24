@@ -95,3 +95,10 @@ ul {
     background-color: #2a2a2a;
     transform: translateY(-2px);
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+}

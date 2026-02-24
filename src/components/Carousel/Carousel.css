@@ -128,3 +128,61 @@
 .cta-primary:hover {
     opacity: 0.8;
 }
+
+/* Responsive adjustments for Carousel */
+@media (max-width: 992px) {
+    .carousel-item {
+        width: 100px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .carousel-item:first-child,
+    .carousel-item:last-child {
+        display: none;
+        /* Hide outer items to prevent overflow */
+    }
+
+    .carousel-item {
+        width: 120px;
+        height: 170px;
+    }
+
+    .cta-group {
+        width: 100%;
+        max-width: 377px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-track {
+        gap: var(--spacing-md);
+    }
+
+    .carousel-item {
+        width: 80px;
+        height: 120px;
+    }
+
+    .cta-group {
+        flex-direction: column;
+        height: auto;
+        background-color: transparent;
+        box-shadow: none;
+        gap: var(--spacing-sm);
+    }
+
+    .cta-btn {
+        width: 100% !important;
+        /* Override inline flex sizing */
+        height: 48px;
+        border-radius: var(--border-radius-full);
+    }
+
+    .cta-primary {
+        background-color: #A0FF00;
+        padding-left: 0;
+    }
+}

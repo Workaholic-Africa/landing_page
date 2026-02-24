@@ -152,3 +152,50 @@
     justify-content: center;
     color: var(--color-text);
 }
+
+/* Responsive adjustments for Header */
+@media (max-width: 992px) {
+    .nav-links {
+        display: none;
+        /* Hide main links on tablet and smaller */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 var(--spacing-md);
+    }
+
+    .logo-text {
+        font-size: 20px;
+    }
+
+    .logo-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+    }
+
+    .action-section {
+        gap: var(--spacing-md);
+    }
+
+    .nav-search-input {
+        display: none;
+        /* Hide input entirely on mobile to save space */
+    }
+
+    .nav-search-wrapper {
+        padding: 8px;
+        /* Circular search icon */
+    }
+
+    .nav-search-icon {
+        margin-right: 0;
+    }
+
+    .location-selectors {
+        font-size: 13px;
+        gap: var(--spacing-sm);
+    }
+}

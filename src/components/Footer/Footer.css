@@ -120,6 +120,24 @@
     }
 
     .footer-bg-text {
-        font-size: 30vw;
+        font-size: 200px;
+        /* Scale down for tablet */
+        width: 100%;
+    }
+
+    .footer-col {
+        width: 100%;
+        text-align: center;
+    }
+
+    .social-links {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-bg-text {
+        font-size: 120px;
+        /* Scale down for mobile */
     }
 }
