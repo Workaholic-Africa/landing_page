@@ -1,5 +1,5 @@
 .carousel-section {
-    padding: var(--spacing-xl) 0 var(--spacing-xxl);
+    padding: var(--spacing-md) 0 var(--spacing-xxl);
     position: relative;
     z-index: 5;
 }
@@ -54,7 +54,7 @@
 }
 
 .carousel-item.active-color {
-    transform: scale(1.05);
+    transform: none;
     box-shadow: 0 15px 40px rgba(255, 0, 64, 0.2);
     z-index: 2;
 }
@@ -72,7 +72,7 @@
 }
 
 .carousel-item.active-color:hover {
-    transform: scale(1.05) translateY(-10px);
+    transform: translateY(-10px);
 }
 
 /* CTA Buttons under carousel */

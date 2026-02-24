@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 800;
+    font-weight: 600;
     color: #e2e2e2;
     opacity: 0.4;
     white-space: nowrap;
@@ -52,11 +52,13 @@
 }
 
 .footer-logo {
-    font-size: 32px;
-    font-weight: 800;
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 100%;
     color: var(--color-text);
     margin-bottom: var(--spacing-md);
-    letter-spacing: -1px;
+    letter-spacing: 0%;
 }
 
 .footer-mission {
