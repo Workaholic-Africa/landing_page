@@ -92,12 +92,15 @@
 .search-icon-circle {
     background-color: var(--color-dark);
     color: #A0FF00;
-    width: 36px;
-    height: 36px;
+    width: 33px;
+    height: 33px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+    opacity: 1;
+    transform: rotate(0deg);
 }
 
 .search-input {

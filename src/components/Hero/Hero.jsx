@@ -1,5 +1,4 @@
 import React from 'react';
-import { Search } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 
@@ -23,7 +22,7 @@ const Hero = () => {
                     <div className="search-bar">
                         <div className="search-input-group">
                             <div className="search-icon-circle" onClick={() => navigate('/404')} style={{ cursor: 'pointer' }}>
-                                <Search size={18} />
+                                <img src="/images/search_icon.png" alt="Search" style={{ width: 20, height: 20, opacity: 1, transform: 'rotate(0deg)' }} />
                             </div>
                             <input
                                 type="text"
