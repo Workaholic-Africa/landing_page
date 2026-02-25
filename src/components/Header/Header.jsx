@@ -11,12 +11,7 @@ const Header = () => {
             <div className="header-container">
                 {/* Logo Section */}
                 <Link to="/" className="logo-section">
-                    <div className="logo-icon">
-                        <span>W</span>
-                    </div>
-                    <div className="logo-text">
-                        Workaholic<span className="logo-dot"></span>
-                    </div>
+                    <img src="/images/logofile.png" alt="Workaholic" className="logo-image" />
                 </Link>
 
                 {/* Navigation Links */}
