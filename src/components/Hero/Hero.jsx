@@ -22,7 +22,7 @@ const Hero = () => {
                     <div className="search-bar">
                         <div className="search-input-group">
                             <div className="search-icon-circle" onClick={() => navigate('/404')} style={{ cursor: 'pointer' }}>
-                                <img src="/images/search_icon.png" alt="Search" style={{ width: 20, height: 20, opacity: 1, transform: 'rotate(0deg)' }} />
+                                <img src="/images/search_icon.png" alt="Search" style={{ width: '100%', height: '100%', opacity: 1, transform: 'rotate(0deg)' }} />
                             </div>
                             <input
                                 type="text"

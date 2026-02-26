@@ -10,9 +10,9 @@ const Footer = () => {
 
             <div className="footer-container">
                 <div className="footer-col brand-col">
-                    <div className="footer-logo">
-                        Workaholic<span className="logo-dot"></span>
-                    </div>
+                    <Link to="/" className="footer-logo">
+                        <img src="/images/logo_02.png" alt="Workaholic" className="footer-logo-img" />
+                    </Link>
                     <p className="footer-mission">
                         Redefining how the world works, starting with Nigeria.<br />
                         Join our mission to build a more flexible future.

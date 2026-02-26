@@ -115,14 +115,18 @@
 }
 
 .search-input::placeholder {
-    color: #171717;
+    color: #7D7D7D;
     font-weight: 400;
 }
 
 .state-selector {
     background-color: #EDEEDC;
-    color: var(--color-text-light);
-    padding: 12px 24px;
+    color: #7D7D7D;
+    width: 126px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
     border-radius: var(--border-radius-full);
     font-size: 14px;
     font-weight: 500;

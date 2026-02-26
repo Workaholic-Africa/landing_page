@@ -125,10 +125,104 @@
 }
 
 .menu-btn {
-    display: flex;
+    display: none;
+    /* Hidden by default on desktop */
     align-items: center;
     justify-content: center;
     color: var(--color-text);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-normal), visibility var(--transition-normal);
+}
+
+.mobile-menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile Menu Sidebar */
+.mobile-menu-sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--color-white);
+    z-index: 1000;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+    transition: right var(--transition-normal) cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-xl);
+}
+
+.mobile-menu-sidebar.open {
+    right: 0;
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.mobile-logo-image {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+}
+
+.close-menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text);
+    padding: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-full);
+    transition: background-color var(--transition-fast);
+}
+
+.close-menu-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.mobile-nav-links a {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text);
+    text-decoration: none;
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid #eaeaea;
+    transition: color var(--transition-fast);
+}
+
+.mobile-nav-links a:hover {
+    color: var(--color-primary-hover);
 }
 
 /* Responsive adjustments for Header */
@@ -136,6 +230,10 @@
     .nav-links {
         display: none;
         /* Hide main links on tablet and smaller */
+    }
+
+    .menu-btn {
+        display: flex;
     }
 }
 
