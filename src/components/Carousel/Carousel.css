@@ -36,6 +36,11 @@
     display: block;
 }
 
+.carousel-item:first-child {
+    width: 124px;
+    height: 177px;
+}
+
 /* Gradient overlay for all images */
 .carousel-item::after {
     content: '';
