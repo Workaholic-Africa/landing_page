@@ -7,11 +7,11 @@ const Carousel = () => {
     // Using generic placeholder URLs that we can style to look like the mock
     // In the real app, these would be the actual image assets
     const images = [
-        { id: 1, src: '/images/tower.png', type: 'bw' },
-        { id: 2, src: '/images/dome.png', type: 'bw' },
+        { id: 1, src: '/images/guinea.png', type: 'bw' },
+        { id: 2, src: '/images/egypt.png', type: 'bw' },
         { id: 3, src: '/images/ferrris.png', type: 'color' }, // the middle one is colored
         { id: 4, src: '/images/street.png', type: 'bw' },
-        { id: 5, src: '/images/eifel.png', type: 'bw' },
+        { id: 5, src: '/images/lagos.png', type: 'bw' },
     ];
 
     return (

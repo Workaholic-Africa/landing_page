@@ -21,11 +21,11 @@ const Footer = () => {
 
                 <div className="footer-col links-col">
                     <ul className="social-links">
-                        <li><Link to="/404">LinkedIn</Link></li>
-                        <li><Link to="/404">Facebook</Link></li>
-                        <li><Link to="/404">Instagram</Link></li>
-                        <li><Link to="/404">Twitter</Link></li>
-                        <li><Link to="/404">Tiktok</Link></li>
+                        <li><a href="https://www.linkedin.com/company/112089948/admin/dashboard/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://web.facebook.com/profile.php?id=61587841761666" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/workaholicafrica/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://x.com/workaholicng?s=11" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                        <li><a href="https://www.tiktok.com/@workaholicafrica?_r=1&_t=ZS-93zqANCio5J" target="_blank" rel="noopener noreferrer">Tiktok</a></li>
                     </ul>
                 </div>
 
