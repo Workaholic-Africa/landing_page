@@ -7,7 +7,7 @@
     text-align: center;
     background: url('/images/image copy.png') bottom center no-repeat, linear-gradient(to bottom, #F4F4F4, #D1D1D1);
     background-size: 600px auto, cover;
-    min-height: 80vh;
+    min-height: 70vh;
 }
 
 .not-found-container {
@@ -16,6 +16,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 var(--spacing-xl);
 }
 
 .not-found-title {
@@ -24,6 +25,7 @@
     font-weight: 600;
     color: var(--color-dark);
     line-height: 1;
+    margin-top: -110px;
     margin-bottom: var(--spacing-sm);
     letter-spacing: -0.05em;
 }
@@ -41,8 +43,12 @@
 }
 
 .not-found-text {
-    font-size: 16px;
-    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0;
+    text-align: center;
     color: #8C8C8C;
     margin-bottom: var(--spacing-xl);
 }
@@ -50,7 +56,12 @@
 .not-found-btn {
     background: #4A4A4A;
     color: #A0FF00;
-    padding: 12px 32px;
+    padding: 0;
+    width: 167px;
+    height: 38px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     font-size: 16px;
     font-weight: 500;
     border-radius: var(--border-radius-full);
