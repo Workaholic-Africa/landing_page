@@ -131,6 +131,7 @@
     .footer-container {
         flex-direction: column;
         gap: var(--spacing-lg);
+        padding: 0 var(--spacing-md);
     }
 
     .footer-bg-text {
@@ -141,7 +142,12 @@
 
     .footer-col {
         width: 100%;
+        min-width: 100%;
         text-align: center;
+    }
+
+    .footer-logo {
+        justify-content: center;
     }
 
     .social-links {

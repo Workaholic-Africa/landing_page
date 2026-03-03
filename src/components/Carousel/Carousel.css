@@ -189,5 +189,6 @@
     .cta-primary {
         background-color: #A0FF00;
         padding-left: 0;
+        border-radius: var(--border-radius-full);
     }
 }

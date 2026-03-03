@@ -83,17 +83,24 @@
     .not-found-title {
         font-size: 200px;
         letter-spacing: -10px;
+        margin-top: -80px;
     }
 }
 
 @media (max-width: 768px) {
+    .not-found-container {
+        padding: 0 var(--spacing-md);
+    }
+
     .not-found-title {
         font-size: 140px;
         letter-spacing: -5px;
+        margin-top: -60px;
     }
 
     .not-found-heading {
         font-size: 32px;
+        margin-top: -20px;
     }
 
     .not-found {
@@ -105,10 +112,12 @@
     .not-found-title {
         font-size: 100px;
         letter-spacing: -2px;
+        margin-top: -40px;
     }
 
     .not-found-heading {
         font-size: 24px;
+        margin-top: -10px;
     }
 
     .not-found-text {

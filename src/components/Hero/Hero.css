@@ -28,6 +28,10 @@
     font-weight: 500;
 }
 
+.of-text {
+    margin-right: -10px;
+}
+
 .highlight {
     background-color: var(--color-primary);
     display: inline-block;
@@ -142,6 +146,15 @@
 @media (max-width: 768px) {
     .headline {
         font-size: 48px;
+        line-height: 48px;
+    }
+
+    .of-text {
+        margin-right: 0px;
+    }
+
+    .hero-container {
+        padding: 0 var(--spacing-md);
     }
 
     .search-bar-wrapper {
@@ -157,6 +170,15 @@
 
     .headline {
         font-size: 36px;
+        line-height: 40px;
+    }
+
+    .of-text {
+        margin-right: 4px;
+    }
+
+    .highlight {
+        padding: 4px 12px;
     }
 
     .subhead {

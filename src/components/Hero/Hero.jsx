@@ -11,7 +11,7 @@ const Hero = () => {
                 <h1 className="headline">
                     Experience <span className="italic">the future</span>
                     <br />
-                    <span style={{ marginRight: '-10px' }}>of</span> <span className="highlight">Productivity</span>
+                    <span className="of-text">of</span> <span className="highlight">Productivity</span>
                 </h1>
 
                 <p className="subhead">
