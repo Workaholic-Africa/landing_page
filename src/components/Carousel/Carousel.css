@@ -36,11 +36,6 @@
     display: block;
 }
 
-.carousel-item:first-child {
-    width: 124px;
-    height: 177px;
-}
-
 /* Gradient overlay for all images */
 .carousel-item::after {
     content: '';
@@ -177,9 +172,7 @@
         gap: var(--spacing-md);
     }
 
-    .carousel-item,
-    .carousel-item:first-child,
-    .carousel-item:last-child {
+    .carousel-item {
         width: 100px;
         height: 140px;
     }
