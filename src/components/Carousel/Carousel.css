@@ -150,12 +150,10 @@
         justify-content: flex-start;
         padding: 10px var(--spacing-md);
         scrollbar-width: none;
-        /* Firefox */
     }
 
     .carousel-track::-webkit-scrollbar {
         display: none;
-        /* Chrome, Safari */
     }
 
     .carousel-item {
@@ -179,9 +177,11 @@
         gap: var(--spacing-md);
     }
 
-    .carousel-item {
-        width: 80px;
-        height: 120px;
+    .carousel-item,
+    .carousel-item:first-child,
+    .carousel-item:last-child {
+        width: 100px;
+        height: 140px;
     }
 
     .cta-group {
@@ -195,8 +195,7 @@
     .cta-btn {
         width: 100% !important;
         /* Override inline flex sizing */
-        height: 40px;
-        font-size: 14px;
+        height: 48px;
         border-radius: var(--border-radius-full);
     }
 

@@ -143,15 +143,15 @@
     .footer-col {
         width: 100%;
         min-width: 100%;
-        text-align: left;
+        text-align: center;
     }
 
     .footer-logo {
-        justify-content: flex-start;
+        justify-content: center;
     }
 
     .social-links {
-        align-items: flex-start;
+        align-items: center;
     }
 }
 
