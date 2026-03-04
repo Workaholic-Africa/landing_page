@@ -143,11 +143,24 @@
 }
 
 @media (max-width: 768px) {
+    .carousel-track {
+        overflow-x: auto;
+        padding-bottom: var(--spacing-md);
+        scroll-snap-type: x mandatory;
+        justify-content: flex-start;
+        padding: 10px var(--spacing-md);
+        scrollbar-width: none;
+        /* Firefox */
+    }
 
-    .carousel-item:first-child,
-    .carousel-item:last-child {
+    .carousel-track::-webkit-scrollbar {
         display: none;
-        /* Hide outer items to prevent overflow */
+        /* Chrome, Safari */
+    }
+
+    .carousel-item {
+        flex-shrink: 0;
+        scroll-snap-align: center;
     }
 
     .carousel-item {
@@ -182,7 +195,8 @@
     .cta-btn {
         width: 100% !important;
         /* Override inline flex sizing */
-        height: 48px;
+        height: 40px;
+        font-size: 14px;
         border-radius: var(--border-radius-full);
     }
 

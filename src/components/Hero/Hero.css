@@ -200,6 +200,7 @@
     .search-input-group {
         width: 100%;
         padding-left: 0;
+        gap: 8px;
     }
 
     .search-input {
