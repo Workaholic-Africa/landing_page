@@ -17,15 +17,17 @@ const Carousel = () => {
     return (
         <section className="carousel-section">
             <div className="carousel-container">
-                <div className="carousel-track">
-                    {images.map((img) => (
-                        <div
-                            key={img.id}
-                            className={`carousel-item ${img.type === 'color' ? 'active-color' : ''}`}
-                        >
-                            <img src={img.src} alt="Location highlight" className="carousel-image" />
-                        </div>
-                    ))}
+                <div className="carousel-scroll-wrapper">
+                    <div className="carousel-track">
+                        {images.concat(images).map((img, idx) => (
+                            <div
+                                key={`${img.id}-${idx}`}
+                                className={`carousel-item ${img.type === 'color' ? 'active-color' : ''}`}
+                            >
+                                <img src={img.src} alt="Location highlight" className="carousel-image" />
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 <div className="cta-group">

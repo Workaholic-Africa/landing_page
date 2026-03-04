@@ -138,22 +138,34 @@
 }
 
 @media (max-width: 768px) {
-    .carousel-track {
-        overflow-x: auto;
-        padding-bottom: var(--spacing-md);
-        scroll-snap-type: x mandatory;
-        justify-content: flex-start;
-        padding: 10px var(--spacing-md);
-        scrollbar-width: none;
+    .carousel-scroll-wrapper {
+        width: 100vw;
+        overflow: hidden;
+        padding: 10px 0;
     }
 
-    .carousel-track::-webkit-scrollbar {
-        display: none;
+    .carousel-track {
+        display: flex;
+        width: max-content;
+        gap: var(--spacing-md);
+        margin: 0;
+        animation: scrollLeft 15s linear infinite;
+    }
+
+    @keyframes scrollLeft {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-50% - (var(--spacing-md) / 2)));
+        }
     }
 
     .carousel-item {
         flex-shrink: 0;
-        scroll-snap-align: center;
+        width: 100px;
+        height: 140px;
     }
 
     .carousel-item {
@@ -169,12 +181,23 @@
 
 @media (max-width: 480px) {
     .carousel-track {
-        gap: var(--spacing-md);
+        gap: var(--spacing-sm);
+        animation: scrollLeftMobile 12s linear infinite;
+    }
+
+    @keyframes scrollLeftMobile {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-50% - (var(--spacing-sm) / 2)));
+        }
     }
 
     .carousel-item {
-        width: 100px;
-        height: 140px;
+        width: 80px;
+        height: 115px;
     }
 
     .cta-group {
