@@ -140,18 +140,27 @@
 @media (max-width: 768px) {
     .carousel-track {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         width: 100%;
         gap: var(--spacing-sm);
         margin-bottom: var(--spacing-lg);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .carousel-track::-webkit-scrollbar {
+        display: none;
     }
 
     .carousel-item {
-        flex: 1 1 0;
-        min-width: 0;
-        aspect-ratio: 124 / 177;
-        height: auto;
-        width: auto;
+        flex: 0 0 auto;
+        width: 110px;
+        height: 157px;
+        scroll-snap-align: center;
     }
 
     .cta-group {
@@ -171,6 +180,8 @@
     }
 
     .cta-group {
+        width: 85%;
+        margin: 0 auto;
         flex-direction: column;
         height: auto;
         background-color: transparent;

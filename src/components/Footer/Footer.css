@@ -128,6 +128,10 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .footer {
+        padding: var(--spacing-lg) 0 var(--spacing-lg);
+    }
+
     .footer-container {
         flex-direction: column;
         gap: var(--spacing-lg);
@@ -156,6 +160,10 @@
 }
 
 @media (max-width: 480px) {
+    .footer {
+        padding: var(--spacing-md) 0 var(--spacing-md);
+    }
+
     .footer-bg-text {
         font-size: 120px;
         /* Scale down for mobile */
