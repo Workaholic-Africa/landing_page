@@ -175,6 +175,8 @@
     }
 
     .carousel-item {
+        width: 90px;
+        height: 128px;
         border-radius: 6px;
         /* slightly smaller border radius for tiny pics */
     }

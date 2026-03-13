@@ -168,4 +168,15 @@
         font-size: 120px;
         /* Scale down for mobile */
     }
+
+    .footer-mission,
+    .contact-email,
+    .contact-phones p,
+    .social-links a {
+        font-size: 14px;
+    }
+
+    .contact-heading {
+        font-size: 16px;
+    }
 }
