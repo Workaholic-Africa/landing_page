@@ -10,6 +10,7 @@ const Carousel = () => {
         { id: 1, src: '/images/guinea.png', type: 'bw' },
         { id: 2, src: '/images/egypt.png', type: 'bw' },
         { id: 3, src: '/images/ferrris.png', type: 'color' }, // the middle one is colored
+        { id: 4, src: '/images/street.png', type: 'bw' },
         { id: 5, src: '/images/lagos.png', type: 'bw' },
     ];
 
