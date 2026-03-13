@@ -1,0 +1,215 @@
+commit f0c9fa08ced5a5c3ee20a9da88252eecf01dacb8
+Author: Workaholic <workaholic@example.com>
+Date:   Wed Mar 4 16:34:52 2026 +0100
+
+    Remove 4th carousel image and scale down mobile image sizes
+
+diff --git a/src/components/Carousel/Carousel.jsx b/src/components/Carousel/Carousel.jsx
+index 2cecb59..a128890 100644
+--- a/src/components/Carousel/Carousel.jsx
++++ b/src/components/Carousel/Carousel.jsx
+@@ -10,7 +10,6 @@ const Carousel = () => {
+         { id: 1, src: '/images/guinea.png', type: 'bw' },
+         { id: 2, src: '/images/egypt.png', type: 'bw' },
+         { id: 3, src: '/images/ferrris.png', type: 'color' }, // the middle one is colored
+-        { id: 4, src: '/images/street.png', type: 'bw' },
+         { id: 5, src: '/images/lagos.png', type: 'bw' },
+     ];
+ 
+
+commit 2ff911f47a4d03d4fcb09a0a93bbc927e7229d6d
+Author: Workaholic <workaholic@example.com>
+Date:   Wed Mar 4 16:21:42 2026 +0100
+
+    Revert "Add auto-scroll animation to mobile carousel"
+    
+    This reverts commit 369d03b8b3d37f15982d74cdd492d8b3ced7a00a.
+
+diff --git a/src/components/Carousel/Carousel.jsx b/src/components/Carousel/Carousel.jsx
+index ea3d36a..2cecb59 100644
+--- a/src/components/Carousel/Carousel.jsx
++++ b/src/components/Carousel/Carousel.jsx
+@@ -17,17 +17,15 @@ const Carousel = () => {
+     return (
+         <section className="carousel-section">
+             <div className="carousel-container">
+-                <div className="carousel-scroll-wrapper">
+-                    <div className="carousel-track">
+-                        {images.concat(images).map((img, idx) => (
+-                            <div
+-                                key={`${img.id}-${idx}`}
+-                                className={`carousel-item ${img.type === 'color' ? 'active-color' : ''}`}
+-                            >
+-                                <img src={img.src} alt="Location highlight" className="carousel-image" />
+-                            </div>
+-                        ))}
+-                    </div>
++                <div className="carousel-track">
++                    {images.map((img) => (
++                        <div
++                            key={img.id}
++                            className={`carousel-item ${img.type === 'color' ? 'active-color' : ''}`}
++                        >
++                            <img src={img.src} alt="Location highlight" className="carousel-image" />
++                        </div>
++                    ))}
+                 </div>
+ 
+                 <div className="cta-group">
+
+commit 369d03b8b3d37f15982d74cdd492d8b3ced7a00a
+Author: Workaholic <workaholic@example.com>
+Date:   Wed Mar 4 16:19:04 2026 +0100
+
+    Add auto-scroll animation to mobile carousel
+
+diff --git a/src/components/Carousel/Carousel.jsx b/src/components/Carousel/Carousel.jsx
+index 2cecb59..ea3d36a 100644
+--- a/src/components/Carousel/Carousel.jsx
++++ b/src/components/Carousel/Carousel.jsx
+@@ -17,15 +17,17 @@ const Carousel = () => {
+     return (
+         <section className="carousel-section">
+             <div className="carousel-container">
+-                <div className="carousel-track">
+-                    {images.map((img) => (
+-                        <div
+-                            key={img.id}
+-                            className={`carousel-item ${img.type === 'color' ? 'active-color' : ''}`}
+-                        >
+-                            <img src={img.src} alt="Location highlight" className="carousel-image" />
+-                        </div>
+-                    ))}
++                <div className="carousel-scroll-wrapper">
++                    <div className="carousel-track">
++                        {images.concat(images).map((img, idx) => (
++                            <div
++                                key={`${img.id}-${idx}`}
++                                className={`carousel-item ${img.type === 'color' ? 'active-color' : ''}`}
++                            >
++                                <img src={img.src} alt="Location highlight" className="carousel-image" />
++                            </div>
++                        ))}
++                    </div>
+                 </div>
+ 
+                 <div className="cta-group">
+
+commit b70f1e84d2ab3e348ebd3198fd4ff5b8dc60eb4f
+Author: Workaholic <workaholic@example.com>
+Date:   Thu Feb 26 13:42:49 2026 +0100
+
+    feat: add new images and update links
+
+diff --git a/src/components/Carousel/Carousel.jsx b/src/components/Carousel/Carousel.jsx
+index 551b218..2cecb59 100644
+--- a/src/components/Carousel/Carousel.jsx
++++ b/src/components/Carousel/Carousel.jsx
+@@ -7,11 +7,11 @@ const Carousel = () => {
+     // Using generic placeholder URLs that we can style to look like the mock
+     // In the real app, these would be the actual image assets
+     const images = [
+-        { id: 1, src: '/images/tower.png', type: 'bw' },
+-        { id: 2, src: '/images/dome.png', type: 'bw' },
++        { id: 1, src: '/images/guinea.png', type: 'bw' },
++        { id: 2, src: '/images/egypt.png', type: 'bw' },
+         { id: 3, src: '/images/ferrris.png', type: 'color' }, // the middle one is colored
+         { id: 4, src: '/images/street.png', type: 'bw' },
+-        { id: 5, src: '/images/eifel.png', type: 'bw' },
++        { id: 5, src: '/images/lagos.png', type: 'bw' },
+     ];
+ 
+     return (
+
+commit 10ed763768ea3ddfaf76c0db13356e12b987bc1b
+Author: Workaholic <workaholic@example.com>
+Date:   Thu Feb 26 13:21:02 2026 +0100
+
+    feat(carousel): open waitlist link in new tab
+
+diff --git a/src/components/Carousel/Carousel.jsx b/src/components/Carousel/Carousel.jsx
+index 8f00d2d..551b218 100644
+--- a/src/components/Carousel/Carousel.jsx
++++ b/src/components/Carousel/Carousel.jsx
+@@ -29,7 +29,7 @@ const Carousel = () => {
+                 </div>
+ 
+                 <div className="cta-group">
+-                    <button className="btn cta-btn cta-dark" onClick={() => window.location.href = 'https://waitlist.workaholicafrica.com'}>Join Waitlist</button>
++                    <button className="btn cta-btn cta-dark" onClick={() => window.open('https://waitlist.workaholicafrica.com', '_blank', 'noopener,noreferrer')}>Join Waitlist</button>
+                     <button className="btn cta-btn cta-primary" onClick={() => navigate('/404')}>Subscribe Now</button>
+                 </div>
+             </div>
+
+commit d6a234ace5fe63499068c5aca9c793a3d00035f9
+Author: Workaholic <workaholic@example.com>
+Date:   Mon Feb 23 17:35:48 2026 +0100
+
+    Update waitlist link
+
+diff --git a/src/components/Carousel/Carousel.jsx b/src/components/Carousel/Carousel.jsx
+index 081a57d..8f00d2d 100644
+--- a/src/components/Carousel/Carousel.jsx
++++ b/src/components/Carousel/Carousel.jsx
+@@ -29,7 +29,7 @@ const Carousel = () => {
+                 </div>
+ 
+                 <div className="cta-group">
+-                    <button className="btn cta-btn cta-dark" onClick={() => navigate('/404')}>Join Waitlist</button>
++                    <button className="btn cta-btn cta-dark" onClick={() => window.location.href = 'https://waitlist.workaholicafrica.com'}>Join Waitlist</button>
+                     <button className="btn cta-btn cta-primary" onClick={() => navigate('/404')}>Subscribe Now</button>
+                 </div>
+             </div>
+
+commit a531316fcd0a37d2349dc8d969cd8c973e91596f
+Author: Workaholic <workaholic@example.com>
+Date:   Mon Feb 23 17:22:57 2026 +0100
+
+    Initial commit
+
+diff --git a/src/components/Carousel/Carousel.jsx b/src/components/Carousel/Carousel.jsx
+new file mode 100644
+index 0000000..081a57d
+--- /dev/null
++++ b/src/components/Carousel/Carousel.jsx
+@@ -0,0 +1,40 @@
++import React from 'react';
++import { useNavigate } from 'react-router-dom';
++import './Carousel.css';
++
++const Carousel = () => {
++    const navigate = useNavigate();
++    // Using generic placeholder URLs that we can style to look like the mock
++    // In the real app, these would be the actual image assets
++    const images = [
++        { id: 1, src: '/images/tower.png', type: 'bw' },
++        { id: 2, src: '/images/dome.png', type: 'bw' },
++        { id: 3, src: '/images/ferrris.png', type: 'color' }, // the middle one is colored
++        { id: 4, src: '/images/street.png', type: 'bw' },
++        { id: 5, src: '/images/eifel.png', type: 'bw' },
++    ];
++
++    return (
++        <section className="carousel-section">
++            <div className="carousel-container">
++                <div className="carousel-track">
++                    {images.map((img) => (
++                        <div
++                            key={img.id}
++                            className={`carousel-item ${img.type === 'color' ? 'active-color' : ''}`}
++                        >
++                            <img src={img.src} alt="Location highlight" className="carousel-image" />
++                        </div>
++                    ))}
++                </div>
++
++                <div className="cta-group">
++                    <button className="btn cta-btn cta-dark" onClick={() => navigate('/404')}>Join Waitlist</button>
++                    <button className="btn cta-btn cta-primary" onClick={() => navigate('/404')}>Subscribe Now</button>
++                </div>
++            </div>
++        </section>
++    );
++};
++
++export default Carousel;
